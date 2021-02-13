@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/css/style.css">
+    <title>Pepsi Landing Page</title>
+</head>
+<body>
+    <section class="sec">
+        <header>
+            <a href="#" ><img src="./public/img/logo.png" alt="Logo da Pepsi-Cola" class="logo"></a>
+            <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">What's New</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+        </header>
+        <div class="content">
+            <div class="text-box">
+                <h2>That's What<br><span>I like</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptates nemo rerum praesentium. Eveniet aspernatur labore, voluptas deleniti consectetur id possimus, hic iure, illo tempore veritatis quo dolorum vel nisi?</p>
+                <a href="#">View All Products</a>
+            </div>
+            <div class="img-box">
+                <img src="./public/img/pepsi001.png" alt="Foto de uma lata da Pepsi versão Clássica" class="classic-pepsi">
+                <!-- <img src="./public/img/pepsi002.png" alt="Foto de uuma lata da Pepsi versão Diet" class="diet-pepsi"> -->
+                <!-- <img src="./public/img/pepsi003.png" alt="Foto de uma lata da Pepsi Versão Zero" class="zero-pepsi"> -->
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="./public/img/pepsi001.png" onclick="imgSlider('./public/img/pepsi001.png');changeBgColor('#0062be')" alt="Latinha da Pepsi Clássica versão pequena onde é possível mudar a cor do fundo de acordo com a lata"></li>
+            <li><img src="./public/img/pepsi002.png" onclick="imgSlider('./public/img/pepsi002.png');changeBgColor('#e60c2c')" alt="Latinha da Pepsi Diet versão pequena onde é possível mudar a cor do fundo de acordo com a lata"></li>
+            <li><img src="./public/img/pepsi003.png" onclick="imgSlider('./public/img/pepsi003.png');changeBgColor('#1e1e1e')" alt="Latinha da Pepsi Zero versão pequena onde é possível mudar a cor do fundo de acordo com a lata"></li>
+        </ul>
+        <ul class="scm">
+            <li><a href="#"><img src="./public/img/facebook.png" alt="Logo do Facebook"></a></li>
+            <li><a href="#"><img src="./public/img/twitter.png" alt="Logo do Facebook"></a></li>
+            <li><a href="#"><img src="./public/img/instagram.png" alt="Logo do Facebook"></a></li>
+        </ul>
+    </section>
+
+    <script type="text/javascript">
+        function imgSlider(srcpath){
+            document.querySelector('.classic-pepsi').src = srcpath;
+        }
+        function changeBgColor (color){
+            const sec = document.querySelector('.sec');
+            sec.style.background = color;
+        }
+    </script>
+</body>
+</html>
